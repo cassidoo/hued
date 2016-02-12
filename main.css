@@ -76,6 +76,7 @@ h1 {
   color: #fff;
   outline: none;
   padding: 10px;
+  width: 80px;
 }
 
 .input button:hover {
@@ -87,6 +88,7 @@ h1 {
   border: none;
   border-bottom: solid 2px #ebf0f1;
   outline: none;
+  width: 70%;
   transition: border 0.3s;
 }
 
@@ -143,6 +145,14 @@ h1 {
 
 .color-wheel:hover {
   transform: rotate(360deg);
+}
+
+/* Responsive Jazz */
+@media screen and (max-width: 1080px) {
+  .input, .output {
+    width: 100%;
+    min-height: 40%;
+  }
 }
 
 /* Fade In */
