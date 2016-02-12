@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hued | A Color Palette Generator</title>
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="keys.js"></script>
+  <script type="text/javascript" src="clarifai.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='main.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <div class="subhead">A color palette generator</div>
+      <div class="wheel">
+        <div class="color-wheel"></div>
+        <h1>Hued</h1>
+      </div>
+    </div>
+    <div class="input">
+      <div class="step">Upload a file</div>
+      <div class="form">
+        <input type="text" id="imgurl" placeholder="Image URL"/>
+        <button onclick="run($('#imgurl').val())">Get tags!</button>
+      </div>
+      <div id="images"></div>
+    </div>
+    <div class="output">
+      <div class="step">Get your palette</div>
+      <div id="tags"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+html, body {
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  background-color: #2fabe5;
+  color: #6a7c83;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  margin: 40px;
+}
+
+h1 {
+  color: black;
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  margin: 0px;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0px 00px #0d8ecb;
+  min-height: calc(100% - 80px);
+
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#tags {
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#images img {
+  max-width: 80%;
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.heading {
+  background-color: #ebf0f1;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.input, .output {
+  padding: 20px;
+  width: calc(50% - 41px); /* 41 because of the border */
+  min-height: 80%;
+}
+
+.input {
+  border-right: 1px solid #ebf0f1;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.input button {
+  background-color: #2fabe5;
+  border: none;
+  transition: border 0.3s;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+}
+
+.input button:hover {
+  border-bottom: solid 2px #0d8ecb;
+}
+
+.input input {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #ebf0f1;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input input:focus {
+  border-bottom: solid 2px #6a7c83;
+}
+
+.color-block {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin: 10px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.step {
+  font-size: .75em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.subhead {
+  font-size: .75em;
+  text-transform: uppercase;
+}
+
+.wheel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.color-wheel {
+  position: relative;
+  border: solid 5px white;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: linear-gradient(36deg, #272b66 42.34%, transparent 42.34%) 0 0, linear-gradient(72deg, #2d559f 75.48%, transparent 75.48%) 0 0, linear-gradient(-36deg, #9ac147 42.34%, transparent 42.34%) 100% 0, linear-gradient(-72deg, #639b47 75.48%, transparent 75.48%) 100% 0, linear-gradient(36deg, transparent 57.66%, #e1e23b 57.66%) 100% 100%, linear-gradient(72deg, transparent 24.52%, #f7941e 24.52%) 100% 100%, linear-gradient(-36deg, transparent 57.66%, #662a6c 57.66%) 0 100%, linear-gradient(-72deg, transparent 24.52%, #9a1d34 24.52%) 0 100%, #43a1cd linear-gradient(#ba3e2e, #ba3e2e) 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  transition: 1s;
+}
+
+.color-wheel:hover {
+  transform: rotate(360deg);
+}
+
+/* Fade In */
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
