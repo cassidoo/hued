@@ -22,13 +22,17 @@
       <div class="step">Upload a file</div>
       <div class="form">
         <input type="text" id="imgurl" placeholder="Image URL"/>
-        <button onclick="run($('#imgurl').val())">Get tags!</button>
+        <button onclick="run($('#imgurl').val())">Get palette</button>
       </div>
       <div id="images"></div>
     </div>
     <div class="output">
       <div class="step">Get your palette</div>
       <div id="tags"></div>
+      <div id="downloadable" style="display: none;">
+        <div class="step">Get the LESS</div>
+        <a download="colors.less" href="" id="downloadlink">Download</a>
+      </div>
     </div>
   </div>
 </body>

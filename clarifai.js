@@ -38,10 +38,12 @@ function postImage(imgurl) {
 
 function parseResponse(resp) {
   var tags = [];
+  var names = [];
   if (resp.status_code === 'OK') {
     var colors = resp.results[0].colors;
     for (var i = 0; i < colors.length; i++) {
       tags.push(colors[i].hex);
+      names.push('@' + colors[i].w3c.name + ': ' + tags[i] + ';');
       $('#tags').append(
         '<div class="color-block" style="background-color: ' + tags[i] + '">' + tags[i] + '</div>'
       );
@@ -50,7 +52,27 @@ function parseResponse(resp) {
     console.log('Sorry, something is wrong.');
   }
 
-  return tags;
+  downloadLessFile(names);
+}
+
+var textFile = null; // globals are evil... but I need this
+function createLessFile(text) {
+  var data = new Blob([text], {type: 'text/plain'});
+
+  // manually revoke the object URL to avoid memory leaks
+  if (textFile !== null) {
+    window.URL.revokeObjectURL(textFile);
+  }
+
+  textFile = window.URL.createObjectURL(data);
+
+  return textFile;
+}
+
+function downloadLessFile(names) {
+  var text = names.toString().replace(/,/g, '\n');
+  $('#downloadlink').attr('href', createLessFile(text));
+  $('#downloadable').attr('style', 'display: block;');
 }
 
 function run(imgurl) {

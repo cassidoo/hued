@@ -56,9 +56,10 @@ h1 {
 }
 
 .input, .output {
+  font-size: .75em;
+  min-height: 80%;
   padding: 20px;
   width: calc(50% - 41px); /* 41 because of the border */
-  min-height: 80%;
 }
 
 .input {
@@ -69,9 +70,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-.input button {
+.input button, #downloadlink {
   background-color: #2fabe5;
-  border: none;
+  border: solid 2px #0d8ecb;
   transition: border 0.3s;
   color: #fff;
   outline: none;
@@ -79,8 +80,12 @@ h1 {
   width: 80px;
 }
 
+#downloadlink {
+  text-decoration: none;
+}
+
 .input button:hover {
-  border-bottom: solid 2px #0d8ecb;
+  background-color: #0d8ecb;
 }
 
 .input input {
@@ -100,6 +105,7 @@ h1 {
   width: 60px;
   height: 60px;
   border-radius: 60px;
+  line-height: 60px;
   margin: 10px;
   padding: 20px;
   color: #fff;
@@ -113,7 +119,6 @@ h1 {
 }
 
 .step {
-  font-size: .75em;
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
