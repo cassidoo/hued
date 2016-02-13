@@ -30,6 +30,8 @@ h1 {
 }
 
 #tags {
+  margin-bottom: 20px;
+
   display: flex;
   align-content: flex-start;
   flex-flow: row wrap;
@@ -81,7 +83,9 @@ h1 {
 }
 
 #downloadlink {
+  display: block;
   text-decoration: none;
+  width: 56px;
 }
 
 .input button:hover {
