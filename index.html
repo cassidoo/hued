@@ -33,6 +33,7 @@
         <div class="step">Input your API keys</div>
         <div class="form">
           <input type="text" id="key" placeholder="Client Key"/>
+          <a class="buttonlink" href="http://developer.clarifai.com" target="_blank">Get keys</a>
           <input type="text" id="secret" placeholder="Client Secret"/>
           <button onclick="setKeys($('#key').val(), $('#secret').val())">Set keys</button>
         </div>
@@ -52,7 +53,7 @@
         <div class="step">Get your palette</div>
         <div id="tags"></div>
         <div class="step">Get the LESS</div>
-        <a download="colors.less" href="" id="downloadlink">Download</a>
+        <a class="buttonlink" download="colors.less" href="" id="downloadlink">Download</a>
       </div>
     </div>
   </div>

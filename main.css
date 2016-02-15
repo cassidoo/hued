@@ -7,6 +7,7 @@ body {
   background-color: #2fabe5;
   color: #6a7c83;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 11px;
   margin: 40px;
 }
 
@@ -60,7 +61,6 @@ h1 {
 }
 
 .input, .output {
-  font-size: .75em;
   min-height: 80%;
   padding: 20px;
   width: calc(50% - 41px); /* 41 because of the border */
@@ -74,7 +74,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.input button, #downloadlink {
+.input button, .buttonlink {
   background-color: #2fabe5;
   border: solid 2px #0d8ecb;
   transition: border 0.3s;
@@ -84,10 +84,11 @@ h1 {
   width: 80px;
 }
 
-#downloadlink {
-  display: block;
+.buttonlink {
+  display: inline-block;
   text-decoration: none;
   width: 56px;
+  text-align: center;
 }
 
 .input button:hover {
@@ -135,7 +136,6 @@ h1 {
 }
 
 .subhead {
-  font-size: .75em;
   text-transform: uppercase;
 }
 
