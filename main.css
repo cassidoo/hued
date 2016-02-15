@@ -29,6 +29,14 @@ h1 {
   justify-content: center;
 }
 
+.fader {
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+
 #tags {
   margin-bottom: 20px;
 
@@ -40,20 +48,6 @@ h1 {
 
 #images img {
   max-width: 80%;
-
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
-}
-
-#imageupload {
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
 }
 
 .heading {
@@ -104,6 +98,7 @@ h1 {
   padding: 10px;
   border: none;
   border-bottom: solid 2px #ebf0f1;
+  margin-bottom: 5px;
   outline: none;
   width: 70%;
   transition: border 0.3s;
@@ -111,6 +106,15 @@ h1 {
 
 .input input:focus {
   border-bottom: solid 2px #6a7c83;
+}
+
+.error {
+  color: red;
+}
+
+.error span {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .color-block {
@@ -122,14 +126,6 @@ h1 {
   padding: 20px;
   color: #fff;
   text-align: center;
-}
-
-#downloadable {
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
 }
 
 .step {
