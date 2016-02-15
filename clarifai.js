@@ -1,4 +1,13 @@
+function setKeys(key, secret) {
+  localStorage.setItem('CLIENT_ID', key);
+  localStorage.setItem('CLIENT_SECRET', secret);
+  $('#imageupload').attr('style', 'display: block;');
+}
+
 function getCredentials(cb) {
+  var CLIENT_ID = localStorage.getItem('CLIENT_ID');
+  var CLIENT_SECRET = localStorage.getItem('CLIENT_SECRET');
+
   var data = {
     'grant_type': 'client_credentials',
     'client_id': CLIENT_ID,
