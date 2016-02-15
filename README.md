@@ -1,5 +1,4 @@
-Hued
-===========================
+![Hued](hued.png)
 
 This is a photo-based color palette generator for your sites.
 
