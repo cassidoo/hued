@@ -84,9 +84,13 @@ h1 {
   width: 80px;
 }
 
+.input button a, .buttonlink {
+  color: #fff;
+  text-decoration: none;
+}
+
 .buttonlink {
   display: inline-block;
-  text-decoration: none;
   width: 56px;
   text-align: center;
 }
