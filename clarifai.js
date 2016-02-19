@@ -24,13 +24,8 @@ function getCredentials(cb) {
     localStorage.setItem('tokenTimestamp', Math.floor(Date.now() / 1000));
     cb();
   }, function() {
-    $('.error').append('Something isn\'t right. Try resetting your <span onclick="reset()">API Keys</span>.');
+    error();
   });
-}
-
-function reset() {
-  localStorage.clear();
-  $('#keys').attr('style', 'display: block;');
 }
 
 function postImage(imgurl) {
@@ -50,8 +45,21 @@ function postImage(imgurl) {
     $('#images').append('<img class="fader" src="' + imgurl + '" />');
     parseResponse(r);
   }, function() {
-    $('.error').append('Something isn\'t right. Try resetting your <span>API Keys</span>.');
+    error();
   });
+}
+
+function error() {
+  $('.error').append('Something isn\'t right. Try resetting your <span>API keys</span>.');
+  $('.error span').click(function() {
+    reset();
+  });
+}
+
+function reset() {
+  localStorage.clear();
+  $('#keys').attr('style', 'display: block;');
+  $('.error').empty();
 }
 
 function parseResponse(resp) {
